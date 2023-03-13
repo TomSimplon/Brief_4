@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "parcel": "^2.8.3",
-    "parcel-bundler": "^1.12.5"
+    "parcel": "^2.8.3"
   },
   "name": "brief_4",
   "version": "1.0.0",
