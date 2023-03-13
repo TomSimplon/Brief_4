@@ -1,11 +1,11 @@
 {
   "dependencies": {
+    "parcel": "^2.8.3",
     "parcel-bundler": "^1.12.5"
   },
   "name": "brief_4",
   "version": "1.0.0",
   "main": "script.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
