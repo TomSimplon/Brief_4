@@ -414,3 +414,73 @@ body {
 }
 /* Fin de la partie arrivée */
 
+@media screen and (max-width: 640px) {
+.accueil .contenu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 20px;
+}
+        
+.accueil button {
+    margin-top: 50px;
+}
+
+.question .container {
+    flex-direction: column;
+}
+
+.question .contenu {
+    margin: 50px auto;
+    width: 90%;
+}
+
+.question .container .next {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+}
+
+.answer .contenu {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+.answer h1 {
+    font-size: 35px;
+}
+    
+.answer img {
+    height: 200px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.answer .container .next button {
+    margin-right: 230px;
+}
+
+.bonus .container {
+    flex-direction: column;
+}
+
+.bonus .contenu {
+    margin: 50px auto;
+    width: 90%;
+}
+
+.arrivée .contenu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 20px;
+}
+        
+.arrivée .score {
+    margin-top: 50px;
+}
+}
