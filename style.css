@@ -6,11 +6,12 @@ body {
     -ms-text-size-adjust: 100%;
 }
 
-/* Partie accueil */
-#accueil.hidden {
+#accueil.hidden, #question_1.hidden, #question_2.hidden, #question_3.hidden, #question_4.hidden, #question_5.hidden, #question_6.hidden, #question_7.hidden, #question_8.hidden, #question_9.hidden, #question_10.hidden,
+#answer_1.hidden, #answer_2.hidden, #answer_3.hidden, #answer_4.hidden, #answer_5.hidden, #answer_6.hidden, #answer_7.hidden, #answer_8.hidden, #answer_9.hidden, #answer_10.hidden, #bonus.hidden, #arrivée.hidden {
     display: none;
 }
 
+/* Partie accueil */
 #accueil {
   background-image: url('../img/les grisonnes avec reshade 2.PNG');
   background-position: center;
@@ -47,10 +48,6 @@ body {
 /* Fin de la partie accueil */
 
 /* Partie question */
-#question_1.hidden {
-    display: none;
-}
-
 .question {
     background-image: url('../img/les grisonnes avec reshade 2.PNG');
     background-position: center;
@@ -59,6 +56,7 @@ body {
     width: 100%;
     margin: 0px;
     padding: 0px;
+    height: 100vh;
   }
 
 .question .container {
@@ -164,27 +162,9 @@ body {
     background-color: gray;
     border-radius: 50%;
 }
-
-.question .next button {
-    background-color: deepskyblue;
-    width: fit-content;
-    margin: 0 auto;
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-    padding: 15px 50px;
-    font-size: 25px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
 /* Fin de la partie question */
 
 /* Partie réponse */
-#answer_1.hidden {
-    display: none;
-}
-
 .answer {
   background-image: url('../img/les grisonnes avec reshade 2.PNG');
   background-position: center;
@@ -235,10 +215,6 @@ body {
 /* Fin de la partie réponse */
 
 /* Partie bonus */
-#bonus.hidden {
-    display: none;
-}
-
 .bonus {
     background-image: url('../img/les grisonnes avec reshade 2.PNG');
     background-position: center;
@@ -358,27 +334,9 @@ body {
     background-color: gray;
     border-radius: 50%;
 }
-
-.bonus .next button {
-    background-color: deepskyblue;
-    width: fit-content;
-    margin: 0 auto;
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-    padding: 15px 50px;
-    font-size: 25px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
 /* Fin de la partie question */
 
 /* Partie arrivée */
-#arrivée.hidden {
-    display: none;
-}
-
 #arrivée {
   background-image: url('../img/les grisonnes avec reshade 2.PNG');
   background-position: center;
@@ -433,13 +391,6 @@ body {
 .question .contenu {
     margin: 50px auto;
     width: 90%;
-}
-
-.question .container .next {
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 150px;
 }
 
 .answer .contenu {
