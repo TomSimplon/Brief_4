@@ -431,6 +431,13 @@ document.querySelector('#bonus .answer-btn').addEventListener('click', function(
   bonusSection.classList.add('hidden');
   arrivéeSection.classList.remove('hidden');
   clearInterval(countdownInterval);
+  if (score < 5) {
+    const audio = document.getElementById("audio2"); 
+    audio.play();
+  } else {
+    const audio2 = document.getElementById("audio3")
+    audio2.play();
+  }
 });
 
 const audio = document.getElementById("audio");
@@ -643,9 +650,6 @@ goodAnswers.forEach((answer) => {
     score++; // Incrémentation du score
     scoreElement.textContent = `${score} / ${totalQuestions}`; // Mise à jour de l'affichage du score
     scoreTitle.textContent = `Vous avez eu ${score} bonnes réponses`;
-    if (score < 5 && !document.querySelector("#arrivée").classList.contains("hidden")) {
-      document.getElementById("audio2").play(); // Joue l'audio si le score est inférieur à 5 et que la section n'est pas cachée par une classe hidden
-    }
   });
 });
 
