@@ -432,6 +432,12 @@ document.querySelector('#bonus .answer-btn').addEventListener('click', function(
   arrivéeSection.classList.remove('hidden');
   clearInterval(countdownInterval);
 });
+
+const audio = document.getElementById("audio");
+const playButton = document.getElementById("play-audio");
+  playButton.addEventListener("click", function() {
+    audio.play();
+  });
   
   // Script qui cache la section réponse affichée et affiche la section question suivante
   document.querySelector('#answer_1 .next-btn').addEventListener('click', function() {
@@ -622,6 +628,25 @@ document.querySelector('#answer_10 .next-btn').addEventListener('click', functio
     }, 1000);
   }
   startCountdown11();
+});
+
+// Système de score
+const goodAnswers = document.querySelectorAll(".good_answer");
+const scoreElement = document.querySelector(".score strong");
+const scoreTitle = document.querySelector('#arrivée .titre h1');
+const totalQuestions = 10;
+let score = 0;
+
+// Ajout des écouteurs d'événements sur les boutons "bonne réponse"
+goodAnswers.forEach((answer) => {
+  answer.addEventListener("click", () => {
+    score++; // Incrémentation du score
+    scoreElement.textContent = `${score} / ${totalQuestions}`; // Mise à jour de l'affichage du score
+    scoreTitle.textContent = `Vous avez eu ${score} bonnes réponses`;
+    if (score < 5 && !document.querySelector("#arrivée").classList.contains("hidden")) {
+      document.getElementById("audio2").play(); // Joue l'audio si le score est inférieur à 5 et que la section n'est pas cachée par une classe hidden
+    }
+  });
 });
 
 });

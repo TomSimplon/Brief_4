@@ -763,10 +763,13 @@
          <div class="center">
             <div class="titre">
                  <h2>Bonus : Quelle est la meilleure faction de l'histoire du jeu ?</h2>
+                 <audio id="audio" style="display:none;">
+                  <source src="audio.mp3" type="audio/mpeg">
+                </audio>
                <div class="bouton">
                    <ul style="list-style-type: none;">
-                    <li><button style="background-color: deepskyblue;" class="answer-btn"><img src="../img/alliance.png" alt=""></button></li>
-                    <li><button style="background-color: crimson;"><img src="../img/horde.jpg" alt=""></button></li>
+                    <li><button style="background-color: deepskyblue;" id="play-audio2" class="answer-btn"><img src="../img/alliance.png" alt=""></button></li>
+                    <li><button style="background-color: crimson;" id="play-audio"><img src="../img/horde.jpg" alt=""></button></li>
                    </ul>
   
                </div>
@@ -799,19 +802,22 @@
 </section>
 
 <section id="arrivée" class="arrivée">
-    <div class="container">
-      <div class="contenu">
-         <div class="titre">
-           <h1>
-              Vous avez eu X bonnes réponses
-           </h1>
-         </div>
-    
-         <div class="score">
-           <p><strong>X / 10</strong></p>
-         </div>
-      </div>
+  <div class="container">
+    <div class="contenu">
+      <audio id="audio2" style="display:none;">
+        <source src="illidan.mp3" type="audio/mpeg">
+      </audio>
+       <div class="titre">
+         <h1>
+            Vous avez eu X bonnes réponses
+         </h1>
+       </div>
+  
+       <div class="score">
+         <p><strong>X / 10</strong></p>
+       </div>
     </div>
+  </div>
 </section>
 </body>
 </html>
