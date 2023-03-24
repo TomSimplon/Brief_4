@@ -16,7 +16,6 @@ window.addEventListener('load', function() { // On récupère toutes les section
   const numberDiv8 = document.querySelector('#number8');
   const numberDiv9 = document.querySelector('#number9');
   const numberDiv10 = document.querySelector('#number10');
-  const numberDivBonus = document.querySelector('#numberBonus');
 
   const questionSection1 = document.querySelector('#question_1');
   const questionSection2 = document.querySelector('#question_2');
@@ -42,7 +41,7 @@ window.addEventListener('load', function() { // On récupère toutes les section
   const answerSection9 = document.querySelector('#answer_9');
   const answerSection10 = document.querySelector('#answer_10');
 
-   // Script qui affiche un cooldown de 35 secondes
+   // Variables qui affichent un cooldown de 35 secondes
    let countdown1 = 35;
    let countdown2 = 35;
    let countdown3 = 35;
@@ -53,12 +52,10 @@ window.addEventListener('load', function() { // On récupère toutes les section
    let countdown8 = 35;
    let countdown9 = 35;
    let countdown10 = 35;
-   let countdown11 = 35;
 
    let countdownInterval;
    
-
-  // Script qui cache la section accueil affichée et affiche la section question #question_1
+  // Script qui cache la section accueil affichée et affiche la section #question_1
   document.querySelector('.begin').addEventListener('click', function() {
     document.querySelector('#accueil').classList.add('hidden');
     document.querySelector('#question_1').classList.remove('hidden');
@@ -129,69 +126,22 @@ window.addEventListener('load', function() { // On récupère toutes les section
       answerSection10.classList.remove('hidden');
     }
 
-    function hideQuestionShowAnswer11() {
-      bonusSection.classList.add('hidden');
-      arrivéeSection.classList.remove('hidden');
-    }
-
   // Script qui cache la section question affichée et affiche la section réponse suivante
-  
     const answerBtns1 = document.querySelectorAll("#question_1 .answer-btn");
     answerBtns1.forEach(btn => {
       btn.addEventListener("click", () => {
       questionSection1.classList.add('hidden');
       answerSection1.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_1 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_1 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_1');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     });
   
-
     const answerBtns2 = document.querySelectorAll("#question_2 .answer-btn");
     answerBtns2.forEach(btn => {
       btn.addEventListener("click", () => {
       questionSection2.classList.add('hidden');
       answerSection2.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_2 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_2 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_2');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     });
 
@@ -201,26 +151,6 @@ window.addEventListener('load', function() { // On récupère toutes les section
       questionSection3.classList.add('hidden');
       answerSection3.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_3 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_3 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_3');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     });
 
@@ -230,26 +160,6 @@ window.addEventListener('load', function() { // On récupère toutes les section
       questionSection4.classList.add('hidden');
       answerSection4.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_4 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_4 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_4');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     });
 
@@ -259,26 +169,6 @@ window.addEventListener('load', function() { // On récupère toutes les section
       questionSection5.classList.add('hidden');
       answerSection5.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_5 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_5 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_5');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     });
 
@@ -288,26 +178,6 @@ window.addEventListener('load', function() { // On récupère toutes les section
       questionSection6.classList.add('hidden');
       answerSection6.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_6 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_6 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_6');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     });
 
@@ -317,26 +187,6 @@ window.addEventListener('load', function() { // On récupère toutes les section
       questionSection7.classList.add('hidden');
       answerSection7.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_7 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_7 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_7');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     });
 
@@ -346,26 +196,6 @@ window.addEventListener('load', function() { // On récupère toutes les section
       questionSection8.classList.add('hidden');
       answerSection8.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_8 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_8 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_8');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     })
 
@@ -375,26 +205,6 @@ window.addEventListener('load', function() { // On récupère toutes les section
       questionSection9.classList.add('hidden');
       answerSection9.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_9 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_9 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_9');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     })
 
@@ -404,47 +214,556 @@ window.addEventListener('load', function() { // On récupère toutes les section
       questionSection10.classList.add('hidden');
       answerSection10.classList.remove('hidden');
       clearInterval(countdownInterval);
-      // Récupérer le bouton de réponse avec la classe .good_answer
-      const goodAnswerBtn = document.querySelector('#question_10 .good_answer');
-      // Récupérer tous les boutons de réponse avec la classe .bad_answer
-      const badAnswerBtns = document.querySelectorAll('#question_10 .bad_answer');
-      // Récupérer l'élément de réponse correspondant
-      const responseElem = document.querySelector('.réponse_10');
-      // Définir une variable pour stocker si la réponse a été trouvée
-      let responseFound = false;
-      // Ajouter un événement au bouton de bonne réponse
-      goodAnswerBtn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'green';
-      responseFound = true;
-      });
-      // Ajouter des événements à tous les boutons de mauvaise réponse
-      badAnswerBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-      responseElem.style.backgroundColor = 'red';
-      responseFound = true;
-      });
-      });
       });
     })
 
-document.querySelector('#bonus .answer-btn').addEventListener('click', function() {
-  bonusSection.classList.add('hidden');
-  arrivéeSection.classList.remove('hidden');
-  clearInterval(countdownInterval);
-  if (score < 5) {
-    const audio = document.getElementById("audio2"); 
-    audio.play();
-  } else {
-    const audio2 = document.getElementById("audio3")
-    audio2.play();
-  }
+    document.querySelector('#bonus .answer-btn').addEventListener('click', function() {
+      bonusSection.classList.add('hidden');
+      arrivéeSection.classList.remove('hidden');
+      clearInterval(countdownInterval);
+      if (score < 5) {
+        const audio = document.getElementById("audio2"); 
+        audio.play();
+      } else {
+        const audio2 = document.getElementById("audio3")
+        audio2.play();
+      }
+    });
+    
+    const audio = document.getElementById("audio");
+    const playButton = document.getElementById("play-audio");
+      playButton.addEventListener("click", function() {
+        audio.play();
+      });
+
+
+// Mise en place de la progression dynamique
+const question1Buttons = document.querySelectorAll('#question_1 .good_answer, #question_1 .bad_answer');
+const question2Buttons = document.querySelectorAll('#question_2 .good_answer, #question_2 .bad_answer');
+const question3Buttons = document.querySelectorAll('#question_3 .good_answer, #question_3 .bad_answer');
+const question4Buttons = document.querySelectorAll('#question_4 .good_answer, #question_4 .bad_answer');
+const question5Buttons = document.querySelectorAll('#question_5 .good_answer, #question_5 .bad_answer');
+const question6Buttons = document.querySelectorAll('#question_6 .good_answer, #question_6 .bad_answer');
+const question7Buttons = document.querySelectorAll('#question_7 .good_answer, #question_7 .bad_answer');
+const question8Buttons = document.querySelectorAll('#question_8 .good_answer, #question_8 .bad_answer');
+const question9Buttons = document.querySelectorAll('#question_9 .good_answer, #question_9 .bad_answer');
+const question10Buttons = document.querySelectorAll('#question_10 .good_answer, #question_10 .bad_answer');
+
+const reponse1 = document.querySelector('#question_1 .réponse_1');
+const reponse2 = document.querySelector('#question_2 .réponse_2');
+const reponse3 = document.querySelector('#question_3 .réponse_3');
+const reponse4 = document.querySelector('#question_4 .réponse_4');
+const reponse5 = document.querySelector('#question_5 .réponse_5');
+const reponse6 = document.querySelector('#question_6 .réponse_6');
+const reponse7 = document.querySelector('#question_7 .réponse_7');
+const reponse8 = document.querySelector('#question_8 .réponse_8');
+const reponse9 = document.querySelector('#question_9 .réponse_9');
+const reponse10 = document.querySelector('#question_10 .réponse_10');
+
+const question1Reponse1 = document.querySelector('#question_1 .réponse_1');
+const question2Reponse2 = document.querySelector('#question_2 .réponse_2');
+const question3Reponse3 = document.querySelector('#question_3 .réponse_3');
+const question4Reponse4 = document.querySelector('#question_4 .réponse_4');
+const question5Reponse5 = document.querySelector('#question_5 .réponse_5');
+const question6Reponse6 = document.querySelector('#question_6 .réponse_6');
+const question7Reponse7 = document.querySelector('#question_7 .réponse_7');
+const question8Reponse8 = document.querySelector('#question_8 .réponse_8');
+const question9Reponse9 = document.querySelector('#question_9 .réponse_9');
+const question10Reponse10 = document.querySelector('#question_10 .réponse_10');
+
+// Question 1
+question1Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse1.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse1.style.backgroundColor = 'red';
+    }
+
+    const question2Progress = document.querySelector('#question_2 .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+  });
 });
 
-const audio = document.getElementById("audio");
-const playButton = document.getElementById("play-audio");
-  playButton.addEventListener("click", function() {
-    audio.play();
+
+// Question 2
+question2Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse2.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse2.style.backgroundColor = 'red';
+    }
+    
+    const question2Progress = document.querySelector('#question_3 .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+    const question3Progress = document.querySelector('#question_3 .progress');
+    if (question2Reponse2.style.backgroundColor === 'green') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'green';
+    } else if (question2Reponse2.style.backgroundColor === 'red') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'red';
+    }
   });
+});
+
+// Question 3
+question3Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse3.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse3.style.backgroundColor = 'red';
+    }
+    
+    const question2Progress = document.querySelector('#question_4 .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+
+    const question3Progress = document.querySelector('#question_4 .progress');
+    if (question2Reponse2.style.backgroundColor === 'green') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'green';
+    } else if (question2Reponse2.style.backgroundColor === 'red') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'red';
+    }
+
+    const question4Progress = document.querySelector('#question_4 .progress');
+    if (question3Reponse3.style.backgroundColor === 'green') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'green';
+    } else if (question3Reponse3.style.backgroundColor === 'red') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'red';
+    }
+  });
+});
+
+// Question 4
+question4Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse4.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse4.style.backgroundColor = 'red';
+    }
+    
+    const question2Progress = document.querySelector('#question_5 .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+
+    const question3Progress = document.querySelector('#question_5 .progress');
+    if (question2Reponse2.style.backgroundColor === 'green') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'green';
+    } else if (question2Reponse2.style.backgroundColor === 'red') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'red';
+    }
+
+    const question4Progress = document.querySelector('#question_5 .progress');
+    if (question3Reponse3.style.backgroundColor === 'green') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'green';
+    } else if (question3Reponse3.style.backgroundColor === 'red') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'red';
+    }
+
+    const question5Progress = document.querySelector('#question_5 .progress');
+    if (question4Reponse4.style.backgroundColor === 'green') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'green';
+    } else if (question4Reponse4.style.backgroundColor === 'red') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'red';
+    }
+  });
+});
+
+// Question 5
+question5Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse5.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse5.style.backgroundColor = 'red';
+    }
+    
+    const question2Progress = document.querySelector('#question_6 .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+
+    const question3Progress = document.querySelector('#question_6 .progress');
+    if (question2Reponse2.style.backgroundColor === 'green') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'green';
+    } else if (question2Reponse2.style.backgroundColor === 'red') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'red';
+    }
+
+    const question4Progress = document.querySelector('#question_6 .progress');
+    if (question3Reponse3.style.backgroundColor === 'green') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'green';
+    } else if (question5Reponse5.style.backgroundColor === 'red') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'red';
+    }
+
+    const question5Progress = document.querySelector('#question_6 .progress');
+    if (question4Reponse4.style.backgroundColor === 'green') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'green';
+    } else if (question4Reponse4.style.backgroundColor === 'red') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'red';
+    }
+
+  
+  const question6Progress = document.querySelector('#question_6 .progress');
+  if (question5Reponse5.style.backgroundColor === 'green') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'green';
+  } else if (question5Reponse5.style.backgroundColor === 'red') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'red';
+  }
+});
+});
+
+// Question 6
+question6Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse6.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse6.style.backgroundColor = 'red';
+    }
+    
+    const question2Progress = document.querySelector('#question_7 .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+
+    const question3Progress = document.querySelector('#question_7 .progress');
+    if (question2Reponse2.style.backgroundColor === 'green') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'green';
+    } else if (question2Reponse2.style.backgroundColor === 'red') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'red';
+    }
+
+    const question4Progress = document.querySelector('#question_7 .progress');
+    if (question3Reponse3.style.backgroundColor === 'green') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'green';
+    } else if (question3Reponse3.style.backgroundColor === 'red') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'red';
+    }
+
+    const question5Progress = document.querySelector('#question_7 .progress');
+    if (question4Reponse4.style.backgroundColor === 'green') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'green';
+    } else if (question4Reponse4.style.backgroundColor === 'red') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'red';
+    }
+    
+    const question6Progress = document.querySelector('#question_7 .progress');
+  if (question5Reponse5.style.backgroundColor === 'green') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'green';
+  } else if (question5Reponse5.style.backgroundColor === 'red') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'red';
+  }
+
+  const question7Progress = document.querySelector('#question_7 .progress');
+  if (question6Reponse6.style.backgroundColor === 'green') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'green';
+  } else if (question6Reponse6.style.backgroundColor === 'red') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'red';
+  }
+});
+});
+
+// Question 7
+question7Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse7.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse7.style.backgroundColor = 'red';
+    }
+    
+    const question2Progress = document.querySelector('#question_8 .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+
+    const question3Progress = document.querySelector('#question_8 .progress');
+    if (question2Reponse2.style.backgroundColor === 'green') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'green';
+    } else if (question2Reponse2.style.backgroundColor === 'red') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'red';
+    }
+
+    const question4Progress = document.querySelector('#question_8 .progress');
+    if (question3Reponse3.style.backgroundColor === 'green') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'green';
+    } else if (question3Reponse3.style.backgroundColor === 'red') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'red';
+    }
+
+    const question5Progress = document.querySelector('#question_8 .progress');
+    if (question4Reponse4.style.backgroundColor === 'green') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'green';
+    } else if (question4Reponse4.style.backgroundColor === 'red') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'red';
+    }
+    
+    const question6Progress = document.querySelector('#question_8 .progress');
+  if (question5Reponse5.style.backgroundColor === 'green') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'green';
+  } else if (question5Reponse5.style.backgroundColor === 'red') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'red';
+  }
+
+  const question7Progress = document.querySelector('#question_8 .progress');
+  if (question6Reponse6.style.backgroundColor === 'green') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'green';
+  } else if (question6Reponse6.style.backgroundColor === 'red') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'red';
+  }
+
+  const question8Progress = document.querySelector('#question_8 .progress');
+  if (question7Reponse7.style.backgroundColor === 'green') {
+    question8Progress.querySelector('.réponse_7').style.backgroundColor = 'green';
+  } else if (question7Reponse7.style.backgroundColor === 'red') {
+    question8Progress.querySelector('.réponse_7').style.backgroundColor = 'red';
+  }
+});
+});
+
+// Question 8
+question8Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse8.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse8.style.backgroundColor = 'red';
+    }
+    
+    const question2Progress = document.querySelector('#question_9 .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+
+    const question3Progress = document.querySelector('#question_9 .progress');
+    if (question2Reponse2.style.backgroundColor === 'green') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'green';
+    } else if (question2Reponse2.style.backgroundColor === 'red') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'red';
+    }
+
+    const question4Progress = document.querySelector('#question_9 .progress');
+    if (question3Reponse3.style.backgroundColor === 'green') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'green';
+    } else if (question3Reponse3.style.backgroundColor === 'red') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'red';
+    }
+
+    const question5Progress = document.querySelector('#question_9 .progress');
+    if (question4Reponse4.style.backgroundColor === 'green') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'green';
+    } else if (question4Reponse4.style.backgroundColor === 'red') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'red';
+    }
+    
+    const question6Progress = document.querySelector('#question_9 .progress');
+  if (question5Reponse5.style.backgroundColor === 'green') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'green';
+  } else if (question5Reponse5.style.backgroundColor === 'red') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'red';
+  }
+
+  const question7Progress = document.querySelector('#question_9 .progress');
+  if (question6Reponse6.style.backgroundColor === 'green') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'green';
+  } else if (question6Reponse6.style.backgroundColor === 'red') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'red';
+  }
+
+  const question8Progress = document.querySelector('#question_9 .progress');
+  if (question7Reponse7.style.backgroundColor === 'green') {
+    question8Progress.querySelector('.réponse_7').style.backgroundColor = 'green';
+  } else if (question7Reponse7.style.backgroundColor === 'red') {
+    question8Progress.querySelector('.réponse_7').style.backgroundColor = 'red';
+  }
+  const question9Progress = document.querySelector('#question_9 .progress');
+  if (question8Reponse8.style.backgroundColor === 'green') {
+    question9Progress.querySelector('.réponse_8').style.backgroundColor = 'green';
+  } else if (question8Reponse8.style.backgroundColor === 'red') {
+    question9Progress.querySelector('.réponse_8').style.backgroundColor = 'red';
+  }
+});
+});
+
+// Question 9
+question9Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse9.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse9.style.backgroundColor = 'red';
+    }
+    
+    const question2Progress = document.querySelector('#question_10 .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+
+    const question3Progress = document.querySelector('#question_10 .progress');
+    if (question2Reponse2.style.backgroundColor === 'green') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'green';
+    } else if (question2Reponse2.style.backgroundColor === 'red') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'red';
+    }
+
+    const question4Progress = document.querySelector('#question_10 .progress');
+    if (question3Reponse3.style.backgroundColor === 'green') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'green';
+    } else if (question3Reponse3.style.backgroundColor === 'red') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'red';
+    }
+
+    const question5Progress = document.querySelector('#question_10 .progress');
+    if (question4Reponse4.style.backgroundColor === 'green') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'green';
+    } else if (question4Reponse4.style.backgroundColor === 'red') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'red';
+    }
+    
+    const question6Progress = document.querySelector('#question_10 .progress');
+  if (question5Reponse5.style.backgroundColor === 'green') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'green';
+  } else if (question5Reponse5.style.backgroundColor === 'red') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'red';
+  }
+
+  const question7Progress = document.querySelector('#question_10 .progress');
+  if (question6Reponse6.style.backgroundColor === 'green') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'green';
+  } else if (question6Reponse6.style.backgroundColor === 'red') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'red';
+  }
+
+  const question8Progress = document.querySelector('#question_10 .progress');
+  if (question7Reponse7.style.backgroundColor === 'green') {
+    question8Progress.querySelector('.réponse_7').style.backgroundColor = 'green';
+  } else if (question7Reponse7.style.backgroundColor === 'red') {
+    question8Progress.querySelector('.réponse_7').style.backgroundColor = 'red';
+  }
+  const question9Progress = document.querySelector('#question_10 .progress');
+  if (question8Reponse8.style.backgroundColor === 'green') {
+    question9Progress.querySelector('.réponse_8').style.backgroundColor = 'green';
+  } else if (question8Reponse8.style.backgroundColor === 'red') {
+    question9Progress.querySelector('.réponse_8').style.backgroundColor = 'red';
+  }
+
+  const question10Progress = document.querySelector('#question_10 .progress');
+  if (question9Reponse9.style.backgroundColor === 'green') {
+    question10Progress.querySelector('.réponse_9').style.backgroundColor = 'green';
+  } else if (question9Reponse9.style.backgroundColor === 'red') {
+    question10Progress.querySelector('.réponse_9').style.backgroundColor = 'red';
+  }
+});
+});
+
+// Question 10
+question10Buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('good_answer')) {
+      reponse10.style.backgroundColor = 'green';
+    } else if (button.classList.contains('bad_answer')) {
+      reponse10.style.backgroundColor = 'red';
+    }
+    
+    const question2Progress = document.querySelector('#bonus .progress');
+    if (question1Reponse1.style.backgroundColor === 'green') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'green';
+    } else if (question1Reponse1.style.backgroundColor === 'red') {
+      question2Progress.querySelector('.réponse_1').style.backgroundColor = 'red';
+    }
+
+    const question3Progress = document.querySelector('#bonus .progress');
+    if (question2Reponse2.style.backgroundColor === 'green') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'green';
+    } else if (question2Reponse2.style.backgroundColor === 'red') {
+      question3Progress.querySelector('.réponse_2').style.backgroundColor = 'red';
+    }
+
+    const question4Progress = document.querySelector('#bonus .progress');
+    if (question3Reponse3.style.backgroundColor === 'green') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'green';
+    } else if (question3Reponse3.style.backgroundColor === 'red') {
+      question4Progress.querySelector('.réponse_3').style.backgroundColor = 'red';
+    }
+
+    const question5Progress = document.querySelector('#bonus .progress');
+    if (question4Reponse4.style.backgroundColor === 'green') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'green';
+    } else if (question4Reponse4.style.backgroundColor === 'red') {
+      question5Progress.querySelector('.réponse_4').style.backgroundColor = 'red';
+    }
+    
+    const question6Progress = document.querySelector('#bonus .progress');
+  if (question5Reponse5.style.backgroundColor === 'green') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'green';
+  } else if (question5Reponse5.style.backgroundColor === 'red') {
+    question6Progress.querySelector('.réponse_5').style.backgroundColor = 'red';
+  }
+
+  const question7Progress = document.querySelector('#bonus .progress');
+  if (question6Reponse6.style.backgroundColor === 'green') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'green';
+  } else if (question6Reponse6.style.backgroundColor === 'red') {
+    question7Progress.querySelector('.réponse_6').style.backgroundColor = 'red';
+  }
+
+  const question8Progress = document.querySelector('#bonus .progress');
+  if (question7Reponse7.style.backgroundColor === 'green') {
+    question8Progress.querySelector('.réponse_7').style.backgroundColor = 'green';
+  } else if (question7Reponse7.style.backgroundColor === 'red') {
+    question8Progress.querySelector('.réponse_7').style.backgroundColor = 'red';
+  }
+  const question9Progress = document.querySelector('#bonus .progress');
+  if (question8Reponse8.style.backgroundColor === 'green') {
+    question9Progress.querySelector('.réponse_8').style.backgroundColor = 'green';
+  } else if (question8Reponse8.style.backgroundColor === 'red') {
+    question9Progress.querySelector('.réponse_8').style.backgroundColor = 'red';
+  }
+
+  const question10Progress = document.querySelector('#bonus .progress');
+  if (question9Reponse9.style.backgroundColor === 'green') {
+    question10Progress.querySelector('.réponse_9').style.backgroundColor = 'green';
+  } else if (question9Reponse9.style.backgroundColor === 'red') {
+    question10Progress.querySelector('.réponse_9').style.backgroundColor = 'red';
+  }
+
+  const questionBonusProgress = document.querySelector('#bonus .progress');
+  if (question10Reponse10.style.backgroundColor === 'green') {
+    questionBonusProgress.querySelector('.réponse_10').style.backgroundColor = 'green';
+  } else if (question10Reponse10.style.backgroundColor === 'red') {
+    questionBonusProgress.querySelector('.réponse_10').style.backgroundColor = 'red';
+  }
+});
+});
+
   
   // Script qui cache la section réponse affichée et affiche la section question suivante
   document.querySelector('#answer_1 .next-btn').addEventListener('click', function() {
@@ -621,20 +940,6 @@ document.querySelector('#answer_9 .next-btn').addEventListener('click', function
 document.querySelector('#answer_10 .next-btn').addEventListener('click', function() {
   answerSection10.classList.add('hidden');
   bonusSection.classList.remove('hidden');
-  function startCountdown11() {
-    clearInterval(countdownInterval);
-    countdownInterval = setInterval(function() {
-      if (!bonusSection.classList.contains('hidden')) {
-        countdown11--;
-        numberDivBonus.innerHTML = `<p><strong>${countdown11}</strong></p>`;
-        if (countdown11 <= 0) {
-          clearInterval(countdownInterval);
-          hideQuestionShowAnswer11()
-        }
-      }
-    }, 1000);
-  }
-  startCountdown11();
 });
 
 // Système de score
@@ -644,7 +949,6 @@ const scoreTitle = document.querySelector('#arrivée .titre h1');
 const totalQuestions = 10;
 let score = 0;
 
-// Ajout des écouteurs d'événements sur les boutons "bonne réponse"
 goodAnswers.forEach((answer) => {
   answer.addEventListener("click", () => {
     score++; // Incrémentation du score
