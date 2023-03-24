@@ -1,4 +1,4 @@
-# Quiz
+# Quiz World of Warcraft
 
  - Lien vers la maquette figma : https://www.figma.com/file/cfE0ZsyYKhZqMrdQBcwmid/Quiz-Javascript?node-id=38-2&t=Y66tnB3moa1I0D3L-0
  - Trello : https://trello.com/b/jBSVeLEN/d%C3%A9veloppement-du-projet 
@@ -6,9 +6,7 @@
  ## Contexte du projet : 
  - L’agence dans laquelle vous réalisez votre stage développe bénévolement tous les ans, une application dans le but de promouvoir la culture, informer sur des sujets environnementaux, sociétaux, etc.
 
- - Cette année l’application se présentera sous la forme d’un quiz. Votre responsable technique souhaite vous confier la réalisation de ce projet, au complet !
-
- - Vous êtes donc libre dans le choix du thème traité et du design du quiz. Vous devrez néanmoins respecter le schema fonctionnel du quiz.
+ - Cette année l’application se présentera sous la forme d’un quiz sur le mmorpg World of Warcraft. Votre responsable technique souhaite vous confier la réalisation de ce projet, au complet !
 
  - Dans un premier temps votre responsable technique souhaite que vous mettiez en place un Trello afin de suivre l’avancement de votre projet.
 
