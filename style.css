@@ -13,7 +13,7 @@ body {
 
 /* Partie accueil */
 #accueil {
-  background-image: url('../img/les grisonnes avec reshade 2.PNG');
+  background-image: url('./img/les grisonnes avec reshade 2.PNG');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,7 +49,7 @@ body {
 
 /* Partie question */
 .question {
-    background-image: url('../img/les grisonnes avec reshade 2.PNG');
+    background-image: url('./img/les grisonnes avec reshade 2.PNG');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,7 +166,7 @@ body {
 
 /* Partie réponse */
 .answer {
-  background-image: url('../img/les grisonnes avec reshade 2.PNG');
+  background-image: url('./img/les grisonnes avec reshade 2.PNG');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -216,7 +216,7 @@ body {
 
 /* Partie bonus */
 .bonus {
-    background-image: url('../img/les grisonnes avec reshade 2.PNG');
+    background-image: url('./img/les grisonnes avec reshade 2.PNG');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -339,7 +339,7 @@ body {
 
 /* Partie arrivée */
 #arrivée {
-  background-image: url('../img/les grisonnes avec reshade 2.PNG');
+  background-image: url('./img/les grisonnes avec reshade 2.PNG');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
